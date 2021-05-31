@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+            <img src="~/Content/Afiliados.png" alt="Logo" id="logo" />
+            <div id="buscador">
+                <form action="#" method="post" id="buscador">
+                    Buscar &nbsp;
+                    <input name="busqueda" type="text" />
+                </form>
+            </div>
+        </header>
+
+        <nav id="navegacion">
+            <ul id="menu_principal">
+                <li> <a href="/">Home</a> </li>
+                <li>
+                    <a href="@Url.Action("Index", "Afiliados")">Afiliados</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="contenido">
+            <article id="principal">
+                @RenderBody()
+            </article>
+            <aside id="sidebar">
+                <h2>Opciones</h2>
+            </aside>
+        </section>
+
+        <footer id="pie">
+            <p> Castagnino R. - Parcial 1 LPPA - 2021 </p>
+        </footer>
+
+
+    </div>
+</body>
+</html>
